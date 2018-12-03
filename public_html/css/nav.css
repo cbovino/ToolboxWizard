@@ -56,3 +56,34 @@ ul {
   float: left;
   padding-left: 15px;
 }
+
+.dropbtn{
+  background-color: #2a283e;
+  color: #eacd1a;
+  border: none;
+  font-size: 16px;
+}
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: #2a283e;
+  /*  z-index; 1;*/
+}
+
+.dropdown-content a{
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover{background-color: #b49e14;}
+
+.dropdown:hover .dropdown-content{display: block;}
+
+.dropdown:hover .dropbtn{background-color:#2a283e;}
