@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> </title>
+  <style>
+    #headerBlock{
+      font-family: verdana;
+      color: yellow;
+      background-color: rgb(60, 60, 60);
+      padding: 0.1px;
+      padding-left: 20px;
+    }
+    legend{font-family: verdana;}
+    p{
+      font-family: verdana;
+      font-size: 20px;
+    }
+
+  </style>
+
+<script>
+function validateForm(){
+  var x = document.forms["login"]["userName"].value;
+  var y = document.forms["login"]["pass"].value;
+  if(x == "" || y == ""){
+    alert("Please enter your user name or password");
+    return false;
+  }
+}
+function validateForm1(){
+  var z = document.forms["resgister"]["firstName"].value;
+  var a = document.forms["resgister"]["lastName"].value;
+  var b = document.forms["resgister"]["email"].value;
+  var c = document.forms["resgister"]["creatingPass"].value;
+  if(z == "" || a == "" || b == "" || c == ""){
+    alert("Information is required");
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+  <div id="headerBlock">
+    <h1>Toolbox Wizard</h1>
+  </div>
+  <form align="center" name="login" onsubmit="return validateForm()">
+
+    <p><b>Login</b></p>
+    User name: <input type="text" name="userName"> <br><br>
+    Password: <input type="text" name="pass"> <br><br>
+    <input type="submit" value="Login"> <br><br><br><br>
+
+  </form>
+
+  <form align="center" name="resgister" onsubmit="return validateForm1()">
+    <fieldset>
+      <p><b>Sign Up</b></p>
+      First name: <input type="text" name="firstName"> <br><br>
+      Last name: <input type="text" name="lastName"> <br><br>
+      Email: <input type="text" name="email"> <br><br>
+      Password: <input type="text" name="creatingPass"> <br><br>
+      Confirm Password: <input type="text" name="confirmPass"> <br><br>
+      <input type="submit" value="Submit"><br><br>
+
+  </fieldset>
+
+  </form>
+</body>
