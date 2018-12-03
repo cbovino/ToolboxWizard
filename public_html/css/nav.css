@@ -12,6 +12,7 @@ ul {
 .nav{
   background-color: #2a283e;
   color: #eacd1a;
+  font-size: 16px;
   list-style: none;
   text-align: right;
   padding: 10px 0 10px 0;
@@ -29,28 +30,4 @@ ul {
 
 .nav > li > a:hover{
   color: #b49e14;
-}
-
-.title{
-  color: #eacd1a;
-  float: left;
-  padding-left: 55px;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.title > a{
-  text-decoration: none;
-  color: #eacd1a;
-}
-
-.banner-image{
-  width:100%;
-  display: block;
-}
-
-.logo-image{
-  width:30px;
-  height:30px;
-  display: block;
 }
