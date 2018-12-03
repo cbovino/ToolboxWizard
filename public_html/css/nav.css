@@ -31,3 +31,28 @@ ul {
 .nav > li > a:hover{
   color: #b49e14;
 }
+
+.title{
+  color: #eacd1a;
+  float: left;
+  padding-left: 12px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.title > a{
+  text-decoration: none;
+  color: #eacd1a;
+}
+
+.banner-image{
+  width:100%;
+  display: block;
+}
+
+.logo-image{
+  width:20px;
+  height:20px;
+  float: left;
+  padding-left: 15px;
+}
