@@ -32,9 +32,20 @@ function validateForm1(){
   var a = document.forms["resgister"]["lastName"].value;
   var b = document.forms["resgister"]["email"].value;
   var c = document.forms["resgister"]["creatingPass"].value;
-  if(z == "" || a == "" || b == "" || c == ""){
+  var d = document.forms["resgister"]["confirmPass"].value;
+  if(z == "" || a == "" || b == "" || c == "" || d == ""){
     alert("Information is required");
     return false;
+  } else if (c != d) {
+    alert("It isn't the same with the password. Please try again");
+  }
+}
+function hidePassOrNot(){
+  var x = document.getElementById("inputPass");
+  if(x.type === "password"){
+    x.type = "text";
+  } else {
+    x.type = "password";
   }
 }
 </script>
@@ -47,7 +58,8 @@ function validateForm1(){
 
     <p><b>Login</b></p>
     User name: <input type="text" name="userName"> <br><br>
-    Password: <input type="text" name="pass"> <br><br>
+    Password: <input type="password" name="pass" id="inputPass"> <br><br>
+    <input type="checkbox" onclick="hidePassOrNot()">Show Password <br><br>
     <input type="submit" value="Login"> <br><br><br><br>
 
   </form>
@@ -58,8 +70,8 @@ function validateForm1(){
       First name: <input type="text" name="firstName"> <br><br>
       Last name: <input type="text" name="lastName"> <br><br>
       Email: <input type="text" name="email"> <br><br>
-      Password: <input type="text" name="creatingPass"> <br><br>
-      Confirm Password: <input type="text" name="confirmPass"> <br><br>
+      Password: <input type="password" name="creatingPass"> <br><br>
+      Confirm Password: <input type="password" name="confirmPass"> <br><br>
       <input type="submit" value="Submit"><br><br>
 
   </fieldset>
