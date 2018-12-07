@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Table with database</title>
+  <title>Watch Progress</title>
   <style>
    table{
      border-collapse : collapse;
@@ -21,22 +21,24 @@
 <body>
 <table>
   <tr>
-    <th>ID</th>
-    <th>Username</th>
-    <th>Password</th>
+    <th>idProgress</th>
+    <th>videoID</th>
+    <th>username</th>
+    <th>subjectID</th>
+    <th>progresscount</th>
   </tr>
   <?php
-  $conn = MysqlndUhConnection("localhost", "root","","company");
+  $conn = MysqlndUhConnection("localhost", "root","","Progress");
   if ($conn -> connect_error){
     die("Connection failed:".$conn-> connect_error);
 
   }
-  $sql = "SELECT ID, Username, Password from login";
+  $sql = "SELECT videoID, username, subjectID, progresscount from Progress";
   $result = $conn-> query($sql);
 
   if($result-> number_rows >0){
     while($row = $result-> fetch_acco()){
-      echo "<tr><td>".$row["id"]."</td><td>".$row["Username"]."</td><td>".$row["Password"]."</td></tr>";
+      echo "<tr><td>".$row["videoID"]."</td><td>".$row["username"]."</td><td>"..$row["subjectID"]."</td><td>".$row["progresscount"]."</td></tr>";
     }
     echo"</table>";
   else{
