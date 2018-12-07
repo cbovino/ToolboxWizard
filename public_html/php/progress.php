@@ -28,7 +28,7 @@
     <th>progresscount</th>
   </tr>
   <?php
-  $conn = MysqlndUhConnection("localhost", "root","","Progress");
+  $conn = Mysqli("localhost", "root","","Progress");
   if ($conn -> connect_error){
     die("Connection failed:".$conn-> connect_error);
 
