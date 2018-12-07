@@ -41,6 +41,7 @@
       echo "<tr><td>".$row["videoID"]."</td><td>".$row["username"]."</td><td>"..$row["subjectID"]."</td><td>".$row["progresscount"]."</td></tr>";
     }
     echo"</table>";
+  }
   else{
     echo "0 result";
   }
