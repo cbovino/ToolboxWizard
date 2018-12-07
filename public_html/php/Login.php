@@ -4,7 +4,7 @@ $un = $_REQUEST["userName"]
 $pas = $_REQUEST["pass"]
 
 // create connection
-$conn =  new mysqli($servename, $username, $password $dbname);
+$conn =  new mysqli($servename, $username, $password, $dbname);
 
 //// Check connection
 if ($conn->connect_error) {
