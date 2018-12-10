@@ -24,7 +24,7 @@ $result = mysqli_query($conn, $sql);
 
 //if row exists, echo enter. else no username and password
 if (mysqli_num_rows($result) > 0){
-  header("location: ../index.html");
+  header("location: home.html");
 } else{
   $message ="Incorrect Please Try Again";
   echo "<script type='text/javascript'>alert('$message');</script>";
