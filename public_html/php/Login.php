@@ -1,25 +1,31 @@
 <?php
 //username and password
-$un = $_REQUEST["userName"];
-$pas = $_REQUEST["pass"];
+$un = $_POST['userName'];
+$pas = $_POST['pass'];
 
-echo "maybe it worked";
+//important names
+$servername = "localhost";
+$username = "root";
+$password = "Yes";
+
 
 // create connection
-$conn =  new mysqli($localhost, $root, $Tarpon54, $toolboxwizard);
+$conn =  new mysqli($servername, $root, $password, "Project");
 
 //// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+echo "Connected";
 
-//request
-$sql = "Select Username, Password FROM User where Username = "'.$un.'" and Password = "'.$pas'" ";
-//select
-$row = mysql_num_rows($sql);
+//query for
+$sql = "Select Username, Password FROM User where Username ='$un' and Password ='$pas'";
+//select results
+$results = $conn->query($sql);
+
 
 //if row exists, echo enter. else no username and password
-if ($row > 0){
+if ($result->num_rows > 0){
   echo "enter";
 
 } else{

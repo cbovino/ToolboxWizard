@@ -39,7 +39,7 @@ function hidePassOrNot(){
   <div id="headerBlock">
     <h1>Toolbox Wizard</h1>
   </div>
-  <form align="center" name="login" action="php/Login.php" onsubmit="return validateForm()">
+  <form align="center" name="login" action="Login.php" onsubmit="return validateForm()" method = "POST">
 
     <p><b>Login</b></p>
     User name: <input type="text" name="userName"> <br><br>
