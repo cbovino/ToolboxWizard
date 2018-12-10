@@ -49,7 +49,7 @@ function hidePassOrNot(){
 
   </form>
 
-  <form align="center" name="resgister" action="php/register.php" onsubmit="return validateForm1()">
+  <form align="center" name="resgister" action="register.php" onsubmit="return validateForm1()">
     <fieldset>
       <p><b>Sign Up</b></p>
       First name: <input type="text" name="firstName"> <br><br>
