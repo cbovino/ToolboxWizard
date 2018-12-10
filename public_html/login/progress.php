@@ -28,11 +28,8 @@
     <th>progresscount</th>
   </tr>
   <?php
-  $conn = mysqli("localhost", "root","Yes","Project");
-  if ($conn -> connect_error){
-    die("Connection failed:".$conn-> connect_error);
+  require "dbinfo.php";
 
-  }
   $sql = "SELECT videoID, username, subjectID, progresscount from Progress";
   $result = $conn-> query($sql);
 
