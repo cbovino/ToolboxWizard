@@ -1,10 +1,12 @@
 <?php
 //username and password
-$un = $_REQUEST["userName"]
-$pas = $_REQUEST["pass"]
+$un = $_REQUEST["userName"];
+$pas = $_REQUEST["pass"];
+
+echo "maybe it worked";
 
 // create connection
-$conn =  new mysqli($servename, $username, $password, $dbname);
+$conn =  new mysqli($localhost, $root, $Tarpon54, $toolboxwizard);
 
 //// Check connection
 if ($conn->connect_error) {
@@ -12,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 //request
-$sql = "Select Username, Password FROM User where Username = '".$un."' and Password = '".$pas"' ";
+$sql = "Select Username, Password FROM User where Username = "'.$un.'" and Password = "'.$pas'" ";
 //select
 $row = mysql_num_rows($sql);
 
