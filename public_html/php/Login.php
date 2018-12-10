@@ -16,20 +16,18 @@ $conn =  new mysqli($servername, $root, $password, "Project");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-echo "Connected";
 
-//query for
+//query for select results
 $sql = "Select Username, Password FROM User where Username ='$un' and Password ='$pas'";
-//select results
-$results = $conn->query($sql);
+$result = mysqli_query($conn, $sql);
 
 
 //if row exists, echo enter. else no username and password
-if ($result->num_rows > 0){
-  echo "enter";
-
+if (mysqli_num_rows($result) = 1){
+  echo "string";
 } else{
-  echo "sorry incorrect";
+  $message ="Incorrect Please Try Again";
+  echo "<script type='text/javascript'>alert('$message');</script>";
 }
 
 ?>
