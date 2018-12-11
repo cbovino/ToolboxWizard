@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="../css/LoginAndSignup.css">
+  <link rel="stylesheet" type="text/css" href="public_html/css/LoginAndSignup.css">
   <title>Toolbox Wizard - login and register </title>
   <script>
   function validateForm(){
