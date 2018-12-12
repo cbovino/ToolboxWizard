@@ -2,41 +2,33 @@
 <html>
 <body>
 <?php
-require "dbinfo.php";
-
-session_start();
-
 $userNa = "";
 $email = "";
-$errors = array();
+$password = "";
+
+$database = mysqli_connect('localhost', 'root', 'mysql', 'Project' );
 
 // receive input from the register form
-$userNa = $_POST["username"];
-$password = $_POST["creatingPass"];
-$email = $_POST["email"];
+$userNa = mysqli_real_escape_string($database, $_POST['newusername']);
+$password = mysqli_real_escape_string($database, $_POST['creatingPass']);
+$email = mysqli_real_escape_string($database, $_POST['email']);
 
 // check to see if the username and email exit or not
 
-$user_check_query = "SELECT * FROM User WHERE Username='$userNa' OR Email='$email' LIMIT 1";
-$result = mysqli_query($conn, $user_check_query);
-$user = mysqli_fetch_assoc($result);
-if($user){
-  if ($user["username"] === $userNa) {
-    array_push($errors, "User name is existed");
-  }
-  if ($user["email"] === $email) {
-    array_push($errors, "Email is existed");
-  }
+$sql = "SELECT * FROM USER WHERE Username='$userNa'";
+$result = mysqli_query($database, $sql);
+if (mysqli_num_rows($result) > 0 ) {
+  echo "<h2> Sorry, User name already exists! Please enter a difference user name
+   by click Return to go back to register page!</h2>";
+  echo "<a href ='index.php'><button>Return</button></a><br><br>";
+} else {
+  $insert = "INSERT INTO USER (Username, Password, Email)
+  			  VALUES('$userNa', '$password', '$email')";
+  mysqli_query($database, $insert);
+  header("location: ../login/home.html");
 }
 
-if(count($errors) == 0){
-  $pass = md5($password);
-  $insert = "INSERT INTO USER (Username, Password, Email)
-  			  VALUES('$userNa', '$pass', '$email')";
-  mysqli_query($conn, $insert);
-  //echo mysqli_affected_rows($conn);
-  header("location: ../home.html");
-}
+
 ?>
 </body>
 </html>
