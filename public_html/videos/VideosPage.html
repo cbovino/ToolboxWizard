@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <title>Toolbox Wizard</title>
-<<<<<<< HEAD:public_html/VideosPage.html
   <link rel="stylesheet" type="text/css" href="css/videospage.css">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
@@ -16,8 +15,6 @@
         success: function (data) {
           //status for each video group in order and append in right place
           //sincere apologies for the spaghetti
-          console.log(group1);
-
           var group1 = [ data[0]["Status"], data[1]["Status"], data[2]["Status"]];
           var group1id = ["oneone", "onetwo", "onethree"];
           $("#"+group1id[0]).append(group1[0]);
