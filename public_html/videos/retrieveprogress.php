@@ -1,11 +1,11 @@
 <?php
 //get database and specific user information information
-require "dbinfo.php";
+require "../login/dbinfo.php";
 session_start();
 
 $username = $_SESSION['usern'];
 
-$sqlstatement = "Select videoID, subjectID, Status From Progress Where User_Username = '$username'";
+$sqlstatement = "Select videoID, subjectID, Status From Progress Where User_Username = 'cbovino'";
 $result = mysqli_query($conn, $sqlstatement);
 
 $rows = array();
