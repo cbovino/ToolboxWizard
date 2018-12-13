@@ -7,6 +7,21 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
   $(document).ready(function(){
+    $(".buttonone").click(function(){
+      $.ajax({
+        url:"poststatus.php", // page with php script
+        type:"POST", // request type
+        success: function(){
+          // an alert to show the user that video for a subject has been completed
+        }
+      });
+    })
+    $(".buttontwo").click(function(){
+      alert("worked");
+    })
+    $(".buttonthree").click(function(){
+      alert("worked");
+    })
     $("#update").click(function(){
     $.ajax({
         type: 'GET',
@@ -130,7 +145,7 @@
     <br>
     <br>
     <p class=statusone id=oneone> Status: </p>
-    <button class="buttonone" id=test type="button">Click when completed</button>
+    <button class="buttonone" id=test>Click when completed</button>
     <p class=statustwo id=onetwo> Status: </p>
     <button class="buttontwo" type="button">Click when completed</button>
     <p class=statusthree id=onethree> Status: </p>
