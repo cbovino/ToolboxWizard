@@ -82,6 +82,7 @@ ul {
   display: block;
 }
 
+
 .dropdown-content a:hover{background-color: #b49e14;}
 
 .dropdown:hover .dropdown-content{display: block;}

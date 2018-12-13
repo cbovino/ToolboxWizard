@@ -11,6 +11,6 @@ if(!$conn){
 }
 
 // if connection is successful, echo success
-echo "success";
+
 
 ?>

@@ -10,7 +10,34 @@
     height: 30px;
     background-color: #4CAF50;
   }
+  table{
+    border-collapse : collapse;
+    width : 100%
+    color: #588c7e;
+    font-family: monospace;
+    font-size: 25px;
+    text-align: left;
+  }
+  th {
+    background-color: #588c7e;
+    color: white;
+  }
+  tr:nth-child(even){background-color: #f2f2f2}
   </style>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $.ajax({
+        type: 'GET',
+        url: 'progress.php',
+        data: { get_param: 'value' },
+        dataType: 'json',
+        success: function (more) {
+          $("#testa").append(more[0]["videoID"]);
+        }
+      })
+  });
+  </script>
   <body>
     <ul class="nav">
       <div class="logo">
@@ -43,9 +70,17 @@
     <br>
     <br>
     <br>
+    <table>
+      <tr>
+        <th>videoID</th>
+        <th>username</th>
+        <th>subjectID</th>
+        <th>status</th>
+      </tr>
+      <p id= 'testa'>test<p>
+    </table>
     <h3>Business:</h3>
     <div class="bar"></div>
-
   </body>
 </head>
 </html>
