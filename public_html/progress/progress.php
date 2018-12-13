@@ -21,21 +21,20 @@
 <body>
 <table>
   <tr>
-    <th>idProgress</th>
     <th>videoID</th>
     <th>username</th>
     <th>subjectID</th>
-    <th>progresscount</th>
+    <th>status</th>
   </tr>
   <?php
   require "dbinfo.php";
 
-  $sql = "SELECT videoID, username, subjectID, progresscount from Progress";
+  $sql = "SELECT videoID, username, subjectID, status from Progress";
   $result = $conn-> query($sql);
 
   if($result-> number_rows >0){
     while($row = $result-> fetch_acco()){
-      echo "<tr><td>".$row["videoID"]."</td><td>".$row["username"]."</td><td>"..$row["subjectID"]."</td><td>".$row["progresscount"]."</td></tr>";
+      echo "<tr><td>".$row["videoID"]."</td><td>".$row["username"]."</td><td>"..$row["subjectID"]."</td><td>".$row["status"]."</td></tr>";
     }
     echo"</table>";
   }
