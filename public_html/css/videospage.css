@@ -93,26 +93,26 @@ ul {
 .buttonone{
   position:relative;
   display: inline;
-  left: 20px;
+  left: 0px;
   top: 30px;
 }
 .statusone{
   position:relative;
   display: inline;
-  left: 100px;
+  left: 90px;
   top: 10px;
 }
 
 .buttontwo{
   position:relative;
   display: inline;
-  left: 200px;
+  left: 160px;
   top: 30px;
 }
 .statustwo{
   position:relative;
   display: inline;
-  left: 300px;
+  left: 200px;
   top: 10px;
 }
 
