@@ -37,3 +37,6 @@ We choose a file structure that separates files by their functionality and locat
    - This table stores all the data we collect about users. For example, on registration and login, we use this table to figure out the Users who belong to the site. We also use the user table to work with progress to see what user has completed what progress.
 4. Youtube
    - This table was not used for information on the site, but more so for tracking how information is being stored in the Progress table. For example, the Youtube table gives a primary key to each video inside the progress table.
+
+### Problem with DB in VCL
+Once we have uploaded the files into the VCL, the DB (SQL) file won't import into the machine's phpMyAdmin because of different CHARSET values. We are unsure how to change this but the site works on our localhost.

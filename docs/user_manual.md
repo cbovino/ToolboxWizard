@@ -23,3 +23,6 @@ Youtube offers a tremendous amount of free knowledge, but one needs to know wher
 9. Moving from left to right, the videos are given number IDs (one to three). If you finish watching video one for Adobe (left most video), open the drop down menu and choose Video One, and click Submit. A notification will pop up letting you know the Completion has been added to your account. The page will refresh.
 10. You can check your completion status on each video by clicking on the “See Video Status” button at the top of the Video page, on the far right.
 11. To Sign Out, click the Sign Out button on the navigation bar, at the top of any page. You will be redirected to the login and signup page.
+
+
+###### side note about database error (see developer manual)
