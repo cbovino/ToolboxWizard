@@ -27,7 +27,7 @@ We choose a file structure that separates files by their functionality and locat
    - We recommend using Google Chrome because that is how we developed. A secondary browser like Safari, is also handy for testing the site.
 
 ### Database Structure:
-##### We structured the DB with four total tables - Progress, Subjects, Users, and Youtube:
+#### We structured the DB with four total tables - Progress, Subjects, Users, and Youtube:
 
 1. Progress
    - We made some changes to this table multiple times throughout our development. In this table, we store data for the user’s status for every single video. Each user has one entry for each video on our page. So on our site, we pull from this table to get user information like status of completion.

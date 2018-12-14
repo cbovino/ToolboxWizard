@@ -11,7 +11,7 @@ Youtube offers a tremendous amount of free knowledge, but one needs to know wher
 3. Progress feature
    - A progress table will show whether the videos on the site have an incomplete or complete status. At the moment, the video IDs (oneone) are shown. The first "one" corresponds to the subject number which is shown on the Videos page. The second "one" corresponds to where the video is placed within the subject section. “Oneone” means the first video (far left) in the Business section.
 
-#### How the user navigates through the application:
+### How the user navigates through the application:
 1. Input the VCL URL provided in this document into the URL bar in your browser. (If you are Professor Donal, you can navigate to the VCL account for “ctang123”).
 2. You may be presented with a folder called “377project-master.” Click on it and then you may see a folder called “public_html.” Click on that.
 3. A list of folders may be presented. Click on the folder called “login.” It’s within the “public_html” folder you clicked on in Step 2.
