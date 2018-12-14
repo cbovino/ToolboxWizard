@@ -90,41 +90,15 @@ ul {
 
 
 
-.buttonone{
-  position:relative;
-  display: inline;
-  left: 0px;
-  top: 30px;
-}
-.statusone{
-  position:relative;
-  display: inline;
-  left: 90px;
-  top: 10px;
-}
-
-.buttontwo{
-  position:relative;
-  display: inline;
-  left: 160px;
-  top: 30px;
-}
 .statustwo{
-  position:relative;
+  position: absolute;
   display: inline;
   left: 200px;
-  top: 10px;
 }
 
-.buttonthree{
-  position:relative;
-  display: inline;
-  left: 400px;
-  top: 30px;
-}
+
 .statusthree{
   position:relative;
   display: inline;
-  left: 500px;
-  top: 10px;
+  left: 6000px;
 }
