@@ -5,14 +5,14 @@ session_start();
 
 $username = $_SESSION['usern'];
 
-$sqlstatement = "SELECT videoID, subjectID, Status FROM Progress WHERE User_Username = 'cbovino'";
+$sqlstatement = "SELECT videoID, subjectID, Status FROM Progress WHERE User_Username = 'crystal'";
 $result = mysqli_query($conn, $sqlstatement);
 
 $rows = array();
 
 while ($r = mysqli_fetch_assoc($result)) {
-    $rows[] = $r;
-    }
+  $rows[] = $r;
+}
 $test = json_encode($rows);
 
 echo $test;
