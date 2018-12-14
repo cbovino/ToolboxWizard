@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$dbUsername = "root2";
-$dbPwd = "mysql";
+$dbUsername = "root";
+$dbPwd = "Mysql01234!";
 $dbName = "Project";
 
 $conn = mysqli_connect($servername, $dbUsername, $dbPwd, $dbName);
@@ -11,6 +11,5 @@ if(!$conn){
 }
 
 // if connection is successful, echo success
-
 
 ?>
