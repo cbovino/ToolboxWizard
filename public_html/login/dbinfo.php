@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost";
+$servername = "localhost:3306";
 $dbUsername = "root";
 $dbPwd = "Mysql01234!";
 $dbName = "Project";
