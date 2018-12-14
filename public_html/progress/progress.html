@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>Toolbox Wizard</title>
   <link rel="stylesheet" type="text/css" href="../css/progress.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <style>
   .bar {
     width: 50%;
@@ -33,10 +34,187 @@
         data: { get_param: 'value' },
         dataType: 'json',
         success: function (more) {
-          $("#testa").append(more[0]["videoID"]);
+          //Spaghetti code
+          var hundred = ["Complete", "Complete", "Complete"];
+          var half1 = ["Incomplete", "Complete", "Complete"];
+          var half2 = ["Complete", "Incomplete","Complete"]
+          var half3 = ["Complete", "Complete","Incomplete"]
+          var third1 = ["Incomplete", "Incomplete","Complete"]
+          var third2 = ["Complete", "Incomplete","Incomplete"]
+          var third3 = ["Incomplete", "Complete","Incomplete"]
+          var zero = ["Incomplete", "Incomplete","Incomplete"]
+
+          //lists for subjects
+          var list1 = []
+          var list2 = []
+          var list3 = []
+          var list4 = []
+          var list5 = []
+          var list6 = []
+          var list7 = []
+          var list8 = []
+          var list9 = []
+
+          //for loops
+          for( x=0; x<3; x++){
+            list1.push(more[x]["status"]);
+          };
+          for( x=3; x<6; x++){
+            list2.push(more[x]["status"]);
+          };
+          for( x=6; x<9; x++){
+            list3.push(more[x]["status"]);
+          };
+          for( x=9; x<12; x++){
+            list4.push(more[x]["status"]);
+          };
+          for( x=12; x<15; x++){
+            list5.push(more[x]["status"]);
+          };
+          for( x=15; x<17; x++){
+            list6.push(more[x]["status"]);
+          };
+          for( x=17; x<19; x++){
+            list7.push(more[x]["status"]);
+          };
+          for( x=19; x<22; x++){
+            list8.push(more[x]["status"]);
+          };
+          for( x=22; x<26; x++){
+            list9.push(more[x]["status"]);
+          };
+
+
+          //if statements for perfect
+          if(list1 in hundred){
+          document.getElementById("busin").style.width = "100%"
+          };
+
+          if(list2 in hundred){
+          document.getElementById("physci").style.width = "100%"
+          };
+          if(list3 in hundred){
+          document.getElementById("web").style.width = "100%"
+          };
+          if(list4 in hundred){
+          document.getElementById("ad").style.width = "100%"
+          };
+          if(list5 in hundred){
+          document.getElementById("music").style.width = "100%"
+          };
+          if(list6 in hundred){
+          document.getElementById("video").style.width = "100%"
+          };
+          if(list7 in hundred){
+          document.getElementById("art").style.width = "100%"
+          };
+          if(list8 in hundred){
+          document.getElementById("math").style.width = "100%"
+          };
+          if(list9 in hundred){
+          document.getElementById("hist").style.width = "100%"
+          };
+          if(list1 in hundred){
+          document.getElementById("busin").style.width = "100%"
+          };
+
+          //if statements for failure
+
+          if(list2 in zero){
+          document.getElementById("physci").style.width = "0%"
+          };
+          if(list3 in zero){
+          document.getElementById("web").style.width = "0%"
+          };
+          if(list4 in zero){
+          document.getElementById("ad").style.width = "0%"
+          };
+          if(list5 in zero){
+          document.getElementById("music").style.width = "0%"
+          };
+          if(list6 in zero){
+          document.getElementById("video").style.width = "0%"
+          };
+          if(list7 in zero){
+          document.getElementById("art").style.width = "0%"
+          };
+          if(list8 in zero){
+          document.getElementById("math").style.width = "0%"
+          };
+          if(list9 in zero){
+          document.getElementById("hist").style.width = "0%"
+          };
+
+          //equal to half
+
+          if(list1 in hundred){
+          document.getElementById("busin").style.width = "100%"
+          };
+
+          if(list2 in hundred){
+          document.getElementById("physci").style.width = "100%"
+          };
+          if(list3 in hundred){
+          document.getElementById("web").style.width = "100%"
+          };
+          if(list4 in hundred){
+          document.getElementById("ad").style.width = "100%"
+          };
+          if(list5 in hundred){
+          document.getElementById("music").style.width = "100%"
+          };
+          if(list6 in hundred){
+          document.getElementById("video").style.width = "100%"
+          };
+          if(list7 in hundred){
+          document.getElementById("art").style.width = "100%"
+          };
+          if(list8 in hundred){
+          document.getElementById("math").style.width = "100%"
+          };
+          if(list9 in hundred){
+          document.getElementById("hist").style.width = "100%"
+          };
+          if(list1 in hundred){
+          document.getElementById("busin").style.width = "100%"
+          };
+
+          //equal to third
+          if(list1 in hundred){
+          document.getElementById("busin").style.width = "100%"
+          };
+
+          if(list2 in hundred){
+          document.getElementById("physci").style.width = "100%"
+          };
+          if(list3 in hundred){
+          document.getElementById("web").style.width = "100%"
+          };
+          if(list4 in hundred){
+          document.getElementById("ad").style.width = "100%"
+          };
+          if(list5 in hundred){
+          document.getElementById("music").style.width = "100%"
+          };
+          if(list6 in hundred){
+          document.getElementById("video").style.width = "100%"
+          };
+          if(list7 in hundred){
+          document.getElementById("art").style.width = "100%"
+          };
+          if(list8 in hundred){
+          document.getElementById("math").style.width = "100%"
+          };
+          if(list9 in hundred){
+          document.getElementById("hist").style.width = "100%"
+          };
+          if(list1 in hundred){
+          document.getElementById("busin").style.width = "100%"
+          };
+
         }
       })
-  });
+    });
   </script>
   <body>
     <ul class="nav">
@@ -68,19 +246,31 @@
       <img class="banner-image" src="../img/banner2.png">
     </div>
     <br>
+    <p id="tes">test</p>
     <br>
-    <br>
-    <table>
-      <tr>
-        <th>videoID</th>
-        <th>username</th>
-        <th>subjectID</th>
-        <th>status</th>
-      </tr>
-      <p id= 'testa'>test<p>
-    </table>
+    <div class="w3-container">
+    <div class="w3-border">
     <h3>Business:</h3>
-    <div class="bar"></div>
+    <div class="w3-grey" id="busin" style="height:24px;width:60%"></div>
+    <h3>Physics and Science:</h3>
+    <div class="w3-grey" id="physci" style="height:24px;width:60%"></div>
+    <h3>Software and Web:</h3>
+    <div class="w3-grey" id="web" style="height:24px;width:60%"></div>
+    <h3>Adobe:</h3>
+    <div class="w3-grey" id="ad" style="height:24px;width:60%"></div>
+    <h3>Music Production:</h3>
+    <div class="w3-grey" id="music" style="height:24px;width:60%"></div>
+    <h3>Video and Photography:</h3>
+    <div class="w3-grey" id="video" style="height:24px;width:60%"></div>
+    <h3>Art and Design:</h3>
+    <div class="w3-grey" id="art" style="height:24px;width:60%"></div>
+    <h3>Engineering and Math:</h3>
+    <div class="w3-grey" id="math" style="height:24px;width:60%"></div>
+    <h3>History:</h3>
+    <div class="w3-grey" id="hist" style="height:24px;width:60%"></div>
+    </div>
+    <br>
+    <br>
   </body>
 </head>
 </html>
