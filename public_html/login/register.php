@@ -2,8 +2,6 @@
 <html>
 <body>
   <?php
-  //session_start();
-  //$_SESSION['$userNa'] = $
   $userNa = "";
   $email = "";
   $password = "";

@@ -3,9 +3,9 @@
 require "../login/dbinfo.php";
 session_start();
 
-$username = $_SESSION['usern'];
+$un = $_SESSION['username'];
 
-$sqlstatement = "SELECT videoID, subjectID, Status FROM Progress WHERE User_Username = 'crystal'";
+$sqlstatement = "SELECT videoID, subjectID, Status FROM Progress WHERE User_Username = '$un'";
 $result = mysqli_query($conn, $sqlstatement);
 
 $rows = array();
