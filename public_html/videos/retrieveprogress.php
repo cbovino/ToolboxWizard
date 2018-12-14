@@ -5,7 +5,7 @@ session_start();
 
 $username = $_SESSION['usern'];
 
-$sqlstatement = "Select videoID, subjectID, Status From Progress Where User_Username = 'cbovino'";
+$sqlstatement = "SELECT videoID, subjectID, Status FROM Progress WHERE User_Username = 'crystal'";
 $result = mysqli_query($conn, $sqlstatement);
 
 $rows = array();
