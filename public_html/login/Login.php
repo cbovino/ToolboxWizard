@@ -2,6 +2,7 @@
 //username and password
 require "dbinfo.php";
 
+session_start();
 $un = $_POST['userName'];
 $pas = $_POST['pass'];
 

@@ -3,11 +3,11 @@
 require "../login/dbinfo.php";
 session_start();
 
-$username = $_SESSION['usern']; //username pulled from login page
+$un = $_SESSION['userName']; //username pulled from login page
 $video = $_POST['videoID']; //videoID (oneone, onetwo, etc) on the drop down menu
 $status = "Complete"; //set the status to Complete when the user submits the video they finished
 
-$sql = "UPDATE Progress SET Status='$status' WHERE User_Username='crystal' && videoID='$video'";
+$sql = "UPDATE Progress SET Status='$status' WHERE User_Username='$un' && videoID='$video'";
 
 $result = mysqli_query($conn, $sql);
 

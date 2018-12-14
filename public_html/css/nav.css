@@ -73,7 +73,6 @@ ul {
   display: none;
   position: absolute;
   background-color: #2a283e;
-  /*  z-index; 1;*/
 }
 
 .dropdown-content a{
