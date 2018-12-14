@@ -7,23 +7,8 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
   $(document).ready(function(){
-    /*$(".buttonone").click(function(){
-      $.ajax({
-        url:"poststatus.php", // page with php script
-        type:"POST", // request type
-        success: function(){
-          // an alert to show the user that video for a subject has been completed
-        }
-      });
-    })
-    $(".buttontwo").click(function(){
-      alert("worked");
-    })
-    $(".buttonthree").click(function(){
-      alert("worked");
-    })*/
     $("#update").click(function(){
-    $.ajax({
+      $.ajax({
         type: 'GET',
         url: 'retrieveprogress.php',
         data: { get_param: 'value' },
@@ -77,63 +62,62 @@
           $("#"+group9id[0]).append(group9[0]);
           $("#"+group9id[1]).append(group9[1]);
           $("#"+group9id[2]).append(group9[2]);
-          alert("complete");
-          }
-        })
+          alert("Video Status Shown");
+        }
       })
-    });
-  </script>
+    })
+  });
+</script>
 </head>
-  <body>
-    <ul id= test2 class="nav">
-      <div class="logo">
-        <img class="logo-image" src="../img/wizard.jpg">
-      </div>
-      <div class="title">
-        <a href="../login/home.html">TOOLBOX WIZARD</a>
-      </div>
-      <li><a href="../login/home.html">Home</a></li>
-      <li><div class="dropdown">
-        <button class="dropbtn">Subjects</button>
-        <div class="dropdown-content">
-          <a href="#anchorbusiness">Business</a>
-          <a href="#anchorphysics">Physics & Science</a>
-          <a href="#anchorsoftware">Software & Web</a>
-          <a href="#anchoradobe">Adobe</a>
-          <a href="#anchormusic">Music Production</a>
-          <a href="#anchorvideo">Video & Photography</a>
-          <a href="#anchorart">Art & Design</a>
-          <a href="#anchorengineer">Engineering</a>
-          <a href="#anchorhistory">History</a>
-        </div>
-      </div></li>
-      <li><a href="../progress/progress.html">Progress</a></li>
-      <li><a href="../login/index.php">Sign Out</a></li>
-    </ul>
-    <div class="banner">
-      <img class="banner-image" src="../img/banner2.png">
+<body>
+  <ul id= test2 class="nav">
+    <div class="logo">
+      <img class="logo-image" src="../img/wizard.jpg">
     </div>
-    <br>
-    <br>
-    <br>
+    <div class="title">
+      <a href="../login/home.html">TOOLBOX WIZARD</a>
+    </div>
+    <li><a href="../login/home.html">Home</a></li>
+    <li><div class="dropdown">
+      <button class="dropbtn">Subjects</button>
+      <div class="dropdown-content">
+        <a href="#anchorbusiness">Business</a>
+        <a href="#anchorphysics">Physics & Science</a>
+        <a href="#anchorsoftware">Software & Web</a>
+        <a href="#anchoradobe">Adobe</a>
+        <a href="#anchormusic">Music Production</a>
+        <a href="#anchorvideo">Video & Photography</a>
+        <a href="#anchorart">Art & Design</a>
+        <a href="#anchorengineer">Engineering</a>
+        <a href="#anchorhistory">History</a>
+      </div>
+    </div></li>
+    <li><a href="../progress/progress.html">Progress</a></li>
+    <li><a href="../login/index.php">Sign Out</a></li>
+  </ul>
+  <div class="banner">
+    <img class="banner-image" src="../img/banner2.png">
+  </div>
+  <br>
+  <br>
 
-    <button id="update" type="button">update</button>
+  <button id="update" type="button">See Video Status</button>
 
 
-    <h1 id="anchorbusiness">1 - Business:</h1>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/sguTAFsWlgY"
-    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
-    picture-in-picture" allowfullscreen></iframe>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/WEDIj9JBTC8"
-    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
-    picture-in-picture" allowfullscreen></iframe>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/lj7ZnyskZuA"
-    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
-    picture-in-picture" allowfullscreen></iframe>
-    <br>
-    <br>
-    <br>
-    <form action="poststatus.php" method="POST">
+  <h1 id="anchorbusiness">1 - Business:</h1>
+  <iframe width="350" height="315" src="https://www.youtube.com/embed/sguTAFsWlgY"
+  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
+  picture-in-picture" allowfullscreen></iframe>
+  <iframe width="350" height="315" src="https://www.youtube.com/embed/WEDIj9JBTC8"
+  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
+  picture-in-picture" allowfullscreen></iframe>
+  <iframe width="350" height="315" src="https://www.youtube.com/embed/lj7ZnyskZuA"
+  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
+  picture-in-picture" allowfullscreen></iframe><br>
+  <p class=statusone id=oneone> Video One Status: </p><br>
+  <p class=statustwo id=onetwo> Video Two Status: </p><br>
+  <p class=statusthree id=onethree> Video Three Status: </p><br>
+  <form action="poststatus.php" method="POST">
     <select name="videoID">
       <option>---Videos---</option>
       <option value="oneone">Video One</option>
@@ -141,11 +125,6 @@
       <option value="onethree">Video Three</option>
     </select>
     <button type="submit" name="submit">Submit</button></form>
-    <br>
-    <br>
-    <p class=statusone id=oneone> Video One Status: </p>
-    <p class=statustwo id=onetwo> Video Two Status: </p>
-    <p class=statusthree id=onethree> Video Three Status: </p>
     <br>
     <br>
 
@@ -157,179 +136,145 @@
     picture-in-picture" allowfullscreen></iframe>
     <iframe width="350" height="315" src="https://www.youtube.com/embed/83kIxoxd-wM"
     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
-    picture-in-picture" allowfullscreen></iframe>
-    <br>
-    <br>
+    picture-in-picture" allowfullscreen></iframe><br>
+    <p class=statusone id=twoone> Video One Status: </p><br>
+    <p class=statustwo id=twotwo> Video Two Status: </p><br>
+    <p class=statusthree id=twothree> Video Three Status: </p><br>
     <form action="poststatus.php" method="POST">
-    <select name="videoID">
-      <option>---Videos---</option>
-      <option value="twoone">Video One</option>
-      <option value="twotwo">Video Two</option>
-      <option value="twothree">Video Three</option>
-    </select>
-    <button type="submit" name="submit">Submit</button></form>
-    <br>
-    <br>
-    <p class=statusone id=twoone> Video One Status: </p>
-    <p class=statustwo id=twotwo> Video Two Status: </p>
-    <p class=statusthree id=twothree> Video Three Status: </p>
-    <br>
-    <br>
+      <select name="videoID">
+        <option>---Videos---</option>
+        <option value="twoone">Video One</option>
+        <option value="twotwo">Video Two</option>
+        <option value="twothree">Video Three</option>
+      </select>
+      <button type="submit" name="submit">Submit</button></form>
+      <br>
+      <br>
 
-    <h1 id="anchorsoftware">3 - Software and Web:</h1>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/UB1O30fR-EE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
-    picture-in-picture" allowfullscreen></iframe>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/yfoY53QXEnI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
-    picture-in-picture" allowfullscreen></iframe>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/oJbfyzaA2QA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <br>
-    <br>
-    <form action="poststatus.php" method="POST">
-    <select name="videoID">
-      <option>---Videos---</option>
-      <option value="threeone">Video One</option>
-      <option value="threetwo">Video Two</option>
-      <option value="threethree">Video Three</option>
-    </select>
-    <button type="submit" name="submit">Submit</button></form>
-    <br>
-    <br>
-    <p class=statusone id=threeone> Video One Status: </p>
-    <p class=statustwo id=threetwo> Video Two Status: </p>
-    <p class=statusthree id=threethree> Video Three Status: </p>
-    <br>
-    <br>
+      <h1 id="anchorsoftware">3 - Software and Web:</h1>
+      <iframe width="350" height="315" src="https://www.youtube.com/embed/UB1O30fR-EE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
+      picture-in-picture" allowfullscreen></iframe>
+      <iframe width="350" height="315" src="https://www.youtube.com/embed/yfoY53QXEnI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
+      picture-in-picture" allowfullscreen></iframe>
+      <iframe width="350" height="315" src="https://www.youtube.com/embed/oJbfyzaA2QA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+      <p class=statusone id=threeone> Video One Status: </p><br>
+      <p class=statustwo id=threetwo> Video Two Status: </p><br>
+      <p class=statusthree id=threethree> Video Three Status: </p><br>
+      <form action="poststatus.php" method="POST">
+        <select name="videoID">
+          <option>---Videos---</option>
+          <option value="threeone">Video One</option>
+          <option value="threetwo">Video Two</option>
+          <option value="threethree">Video Three</option>
+        </select>
+        <button type="submit" name="submit">Submit</button></form>
+        <br>
+        <br>
 
-    <h1 id="anchoradobe">4 - Adobe:</h1>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/pFyOznL9UvA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/RbbQl2sU-ag" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/JGobj8RGMs4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <br>
-    <br>
-    <form action="poststatus.php" method="POST">
-    <select name="videoID">
-      <option>---Videos---</option>
-      <option value="fourone">Video One</option>
-      <option value="fourtwo">Video Two</option>
-      <option value="fourthree">Video Three</option>
-    </select>
-    <button type="submit" name="submit">Submit</button></form>
-    <br>
-    <br>
-    <p class=statusone id=fourone> Video One Status: </p>
-    <p class=statustwo id=fourtwo> Video Two Status: </p>
-    <p class=statusthree id=fourthree> Video Three Status: </p>
-    <br>
-    <br>
+        <h1 id="anchoradobe">4 - Adobe:</h1>
+        <iframe width="350" height="315" src="https://www.youtube.com/embed/pFyOznL9UvA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="350" height="315" src="https://www.youtube.com/embed/RbbQl2sU-ag" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="350" height="315" src="https://www.youtube.com/embed/JGobj8RGMs4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+        <p class=statusone id=fourone> Video One Status: </p><br>
+        <p class=statustwo id=fourtwo> Video Two Status: </p><br>
+        <p class=statusthree id=fourthree> Video Three Status: </p><br>
+        <form action="poststatus.php" method="POST">
+          <select name="videoID">
+            <option>---Videos---</option>
+            <option value="fourone">Video One</option>
+            <option value="fourtwo">Video Two</option>
+            <option value="fourthree">Video Three</option>
+          </select>
+          <button type="submit" name="submit">Submit</button></form>
+          <br>
+          <br>
 
-    <h1 id="anchormusic">5 - Music Production:</h1>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/8k5QwcyGXwc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/CFlcLTqzIR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/pDIsEZsalAo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <br>
-    <br>
-    <form action="poststatus.php" method="POST">
-    <select name="videoID">
-      <option>---Videos---</option>
-      <option value="fiveone">Video One</option>
-      <option value="fivetwo">Video Two</option>
-      <option value="fivethree">Video Three</option>
-    </select>
-    <button type="submit" name="submit">Submit</button></form>
-    <br>
-    <br>
-    <p class=statusone id=fiveone> Video One Status: </p>
-    <p class=statustwo id=fivetwo> Video Two Status: </p>
-    <p class=statusthree id=fivethree> Video Three Status: </p>
-    <br>
-    <br>
+          <h1 id="anchormusic">5 - Music Production:</h1>
+          <iframe width="350" height="315" src="https://www.youtube.com/embed/8k5QwcyGXwc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="350" height="315" src="https://www.youtube.com/embed/CFlcLTqzIR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="350" height="315" src="https://www.youtube.com/embed/pDIsEZsalAo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+          <p class=statusone id=fiveone> Video One Status: </p><br>
+          <p class=statustwo id=fivetwo> Video Two Status: </p><br>
+          <p class=statusthree id=fivethree> Video Three Status: </p><br>
+          <form action="poststatus.php" method="POST">
+            <select name="videoID">
+              <option>---Videos---</option>
+              <option value="fiveone">Video One</option>
+              <option value="fivetwo">Video Two</option>
+              <option value="fivethree">Video Three</option>
+            </select>
+            <button type="submit" name="submit">Submit</button></form>
+            <br>
 
-    <h1 id="anchorvideo">6 - Video and Photography:</h1>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/ppTr4NVqWgI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/ujaCbzLwuB8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/ETsekJKsr3M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <br>
-    <br>
-    <form action="poststatus.php" method="POST">
-    <select name="videoID">
-      <option>---Videos---</option>
-      <option value="sixone">Video One</option>
-      <option value="sixtwo">Video Two</option>
-      <option value="sixthree">Video Three</option>
-    </select>
-    <button type="submit" name="submit">Submit</button></form>
-    <br>
-    <br>
-    <p class=statusone id=sixone> Video One Status: </p>
-    <p class=statustwo id=sixtwo> Video Two Status: </p>
-    <p class=statusthree id=sixthree> Video Three Status: </p>
-    <br>
-    <br>
+            <h1 id="anchorvideo">6 - Video and Photography:</h1>
+            <iframe width="350" height="315" src="https://www.youtube.com/embed/ppTr4NVqWgI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="350" height="315" src="https://www.youtube.com/embed/ujaCbzLwuB8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="350" height="315" src="https://www.youtube.com/embed/ETsekJKsr3M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+            <p class=statusone id=sixone> Video One Status: </p><br>
+            <p class=statustwo id=sixtwo> Video Two Status: </p><br>
+            <p class=statusthree id=sixthree> Video Three Status: </p><br>
+            <form action="poststatus.php" method="POST">
+              <select name="videoID">
+                <option>---Videos---</option>
+                <option value="sixone">Video One</option>
+                <option value="sixtwo">Video Two</option>
+                <option value="sixthree">Video Three</option>
+              </select>
+              <button type="submit" name="submit">Submit</button></form>
+              <br>
 
-    <h1 id="anchorart">7 - Art and Design:</h1>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/IlKaB1etrik" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/uDqjIdI4bF4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/WQWp8kc-EVw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <br>
-    <br>
-    <form action="poststatus.php" method="POST">
-    <select name="videoID">
-      <option>---Videos---</option>
-      <option value="sevenone">Video One</option>
-      <option value="seventwo">Video Two</option>
-      <option value="seventhree">Video Three</option>
-    </select>
-    <button type="submit" name="submit">Submit</button></form>
-    <br>
-    <br>
-    <p class=statusone id=sevenone> Video One Status: </p>
-    <p class=statustwo id=seventwo> Video Two Status: </p>
-    <p class=statusthree id=seventhree> Video Three Status: </p>
-    <br>
-    <br>
+              <h1 id="anchorart">7 - Art and Design:</h1>
+              <iframe width="350" height="315" src="https://www.youtube.com/embed/IlKaB1etrik" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="350" height="315" src="https://www.youtube.com/embed/uDqjIdI4bF4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="350" height="315" src="https://www.youtube.com/embed/WQWp8kc-EVw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+              <p class=statusone id=sevenone> Video One Status: </p><br>
+              <p class=statustwo id=seventwo> Video Two Status: </p><br>
+              <p class=statusthree id=seventhree> Video Three Status: </p><br>
+              <form action="poststatus.php" method="POST">
+                <select name="videoID">
+                  <option>---Videos---</option>
+                  <option value="sevenone">Video One</option>
+                  <option value="seventwo">Video Two</option>
+                  <option value="seventhree">Video Three</option>
+                </select>
+                <button type="submit" name="submit">Submit</button></form>
+                <br>
 
-    <h1 id="anchorengineer">8 - Engineering and Mathematics: </h1>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/grnP3mduZkM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/JrWJnwCMlP0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/jbIQW0gkgxo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <br>
-    <br>
-    <form action="poststatus.php" method="POST">
-    <select name="videoID">
-      <option>---Videos---</option>
-      <option value="eightone">Video One</option>
-      <option value="eighttwo">Video Two</option>
-      <option value="eightthree">Video Three</option>
-    </select>
-    <button type="submit" name="submit">Submit</button></form>
-    <br>
-    <br>
-    <p class=statusone id=eightone> Video One Status: </p>
-    <p class=statustwo id=eighttwo> Video Two Status: </p>
-    <p class=statusthree id=eightthree> Video Three Status: </p>
-    <br>
-    <br>
+                <h1 id="anchorengineer">8 - Engineering and Mathematics: </h1>
+                <iframe width="350" height="315" src="https://www.youtube.com/embed/grnP3mduZkM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="350" height="315" src="https://www.youtube.com/embed/JrWJnwCMlP0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="350" height="315" src="https://www.youtube.com/embed/jbIQW0gkgxo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                <p class=statusone id=eightone> Video One Status: </p><br>
+                <p class=statustwo id=eighttwo> Video Two Status: </p><br>
+                <p class=statusthree id=eightthree> Video Three Status: </p><br>
+                <form action="poststatus.php" method="POST">
+                  <select name="videoID">
+                    <option>---Videos---</option>
+                    <option value="eightone">Video One</option>
+                    <option value="eighttwo">Video Two</option>
+                    <option value="eightthree">Video Three</option>
+                  </select>
+                  <button type="submit" name="submit">Submit</button></form>
+                  <br>
 
-    <h1 id="anchorhistory">9 - History: </h1>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/vo4pMVb0R6M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/TpcbfxtdoI8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/YnCJU6PaCio" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <br>
-    <br>
-    <form action="poststatus.php" method="POST">
-    <select name="videoID">
-      <option>---Videos---</option>
-      <option value="nineone">Video One</option>
-      <option value="ninetwo">Video Two</option>
-      <option value="ninethree">Video Three</option>
-    </select>
-    <button type="submit" name="submit">Submit</button></form>
-    <br>
-    <br>
-    <p class=statusone id=nineone> Video One Status: </p>
-    <p class=statustwo id=ninetwo> Video Two Status: </p>
-    <p class=statusthree id=ninethree> Video Three Status: </p>
-    <br>
-    <br>
-  </body>
-</html>
+                  <h1 id="anchorhistory">9 - History: </h1>
+                  <iframe width="350" height="315" src="https://www.youtube.com/embed/vo4pMVb0R6M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="350" height="315" src="https://www.youtube.com/embed/TpcbfxtdoI8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="350" height="315" src="https://www.youtube.com/embed/YnCJU6PaCio" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                  <p class=statusone id=nineone> Video One Status: </p><br>
+                  <p class=statustwo id=ninetwo> Video Two Status: </p><br>
+                  <p class=statusthree id=ninethree> Video Three Status: </p><br>
+                  <form action="poststatus.php" method="POST">
+                    <select name="videoID">
+                      <option>---Videos---</option>
+                      <option value="nineone">Video One</option>
+                      <option value="ninetwo">Video Two</option>
+                      <option value="ninethree">Video Three</option>
+                    </select>
+                    <button type="submit" name="submit">Submit</button></form>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                  </body>
+                  </html>

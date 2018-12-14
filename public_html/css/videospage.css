@@ -73,7 +73,6 @@ ul {
   display: none;
   position: absolute;
   background-color: #2a283e;
-  /*  z-index; 1;*/
 }
 
 .dropdown-content a{
@@ -88,17 +87,24 @@ ul {
 
 .dropdown:hover .dropbtn{background-color:#2a283e;}
 
-
-
-.statustwo{
-  position: absolute;
-  display: inline;
-  left: 200px;
+.statusone{
+  text-align: justify;
+  display: inline-block;
+  color: #423f66;
 }
 
+.statustwo{
+  text-align: justify;
+  display: inline-block;
+  color: #423f66;
+}
 
 .statusthree{
-  position:relative;
-  display: inline;
-  left: 600px;
+  text-align: justify;
+  display: inline-block;
+  color: #423f66;
+}
+
+#update{
+  float:right;
 }

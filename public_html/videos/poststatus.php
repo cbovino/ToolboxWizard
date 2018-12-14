@@ -12,7 +12,7 @@ $sql = "UPDATE Progress SET Status='$status' WHERE User_Username='crystal' && vi
 $result = mysqli_query($conn, $sql);
 
 echo("<script>alert('Completion added!')</script>"); // notify user completion was successful
-echo("<script>window.location = 'test.html';</script>"); // redirect user to video page again
+echo("<script>window.location = 'VideosPage.html';</script>"); // redirect user to video page again
 
 mysqli_close($conn);
 
